@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Max&#39;s Lab</title>
+  
+  <subtitle>Brainy is a new sexy.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-10-08T16:25:32.772Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Maxim(Kai Luo)</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重装出发，Restart</title>
+    <link href="http://yoursite.com/2018/06/03/restart/"/>
+    <id>http://yoursite.com/2018/06/03/restart/</id>
+    <published>2018-06-03T12:28:13.000Z</published>
+    <updated>2018-10-08T16:25:32.772Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前有写过一点点关于OpenGL的Training blogs，事后感觉自己写的实在是太烂了。当时写blog也是一时兴起，于是当热情消褪之后就一直没有再更新什么内容。再之后因为工作缘故（其实就是上班之后懒了），也就懒得再去更新自己的博客。</p><p>粗略算下来，大概工作了快半年。每天除了上班之外，基本上回家之后就不太想着要去写代码（我给诸位coder抹黑了，对不起！）。这次重开博客，索性干脆就删库重来，所以之前写的内容也就只能对它们说拜拜了。</p><p>今后会不定时地更新内容，也算是日常打卡（其实真正的目的就是为了督促自己写代码！）</p><p>写到这，这第一篇blog就算是写完了。凡事第一次都图个吉利，那么我就借用 PUBG 里面玩家最喜欢听的的一句话作为本篇的结尾。</p><p>“Winner winner, Chicken dinner. (大吉大利，今夜吃鸡！)”</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;之前有写过一点点关于OpenGL的Training blogs，事后感觉自己写的实在是太烂了。当时写blog也是一时兴起，于是当热情消褪之后就一直没有再更新什么内容。再之后因为工作缘故（其实就是上班之后懒了），也就懒得再去更新自己的博客。&lt;/p&gt;
+&lt;p&gt;粗略算下来，大概工作
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
