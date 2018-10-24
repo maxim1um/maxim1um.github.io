@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-08T16:25:32.772Z</updated>
+  <updated>2018-10-24T16:13:50.942Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Occlusion culling</title>
+    <link href="http://yoursite.com/2018/10/25/depth-clipping/"/>
+    <id>http://yoursite.com/2018/10/25/depth-clipping/</id>
+    <published>2018-10-24T16:08:06.000Z</published>
+    <updated>2018-10-24T16:13:50.942Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近遇到一个bug，大致情况是场景中的镜头转到某个角度的时候会特别靠近墙面，导致在镜头移动过程中的有一段时间画面渲染把本不应该看到的墙面都渲染了。</p><p>一开始判断是在这个 pass 的 depth test 没有打开。使用 Renderdoc 抓帧，在 pipeline 的 rasterization 过程里检查 depth stencil 状态。结果发现 depth test 是打开的。最后和原来的 pipeline 各项参数对比，发现其中一项叫做 depth clipping 没有打开，打开之后画面恢复正常。困扰了两天的问题就这么轻松解决了。</p><p>所谓的 depth clipping 就是我们平时用到的深度剔除或者是遮挡剔除。在 rasterization 过程中，如果开启了 depth depth 并且使用 depth clipping，那么在这个阶段会根据之前设置好的视锥体的近远端，对视锥体内部的物体进行 depth test，然后将遮挡部分剔除。</p><p>wiki 上有对 depth clipping 进行简单的描述。</p><blockquote><p>Z-clipping, or depth clipping, refers to techniques that selectively render certain scene objects based on their depth relative to the screen. Most graphics toolkits allow the programmer to specify a “near” and “far” clip depth, and only portions of objects between those two planes are displayed. A creative application programmer can use this method to render visualizations of the interior of a 3D object in the scene. For example, a medical imaging application could use this technique to render the organs inside a human body. A video game programmer can use clipping information to accelerate game logic.[3] For example, a tall wall or building that occludes other game entities can save GPU time that would otherwise be spent transforming and texturing items in the rear areas of the scene; and a tightly integrated software program can use this same information to save CPU time by optimizing out game logic for objects that aren’t seen by the player.[3]</p></blockquote><p>习惯性认为开启了 depth test 就以为能够进行 depth clipping 的这种想法，真的需要改变。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近遇到一个bug，大致情况是场景中的镜头转到某个角度的时候会特别靠近墙面，导致在镜头移动过程中的有一段时间画面渲染把本不应该看到的墙面都渲染了。&lt;/p&gt;
+&lt;p&gt;一开始判断是在这个 pass 的 depth test 没有打开。使用 Renderdoc 抓帧，在 pipel
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>重装出发，Restart</title>
